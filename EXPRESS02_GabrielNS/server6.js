@@ -15,13 +15,29 @@ app.get("/add/:a/b",(req,res)=>{
     const b = parseInt(req.params.b)
 
     const resultado =funcoes.add(a,b)
-    res.send(`A soam de ${a} com ${b} é ${resultado}`)
+    res.send(`A soama de ${a} com ${b} é ${resultado}`)
 })
 
-app.get("/distancia2/:pontoA.: pontoB", (req,res)=>{
+app.get("sub/:A.: B", (req,res)=>{
     const a = parseInt(req.params.a)
     const b = parseInt(req.params.b)
 
     const resultado = funcoes.sub(a,b )
     res.send(`A subtração entre ${a} com ${b} é ${resultado}`)
+})
+
+app.get("mult/:A.: B", (req,res)=>{
+    const a = parseInt(req.params.a)
+    const b = parseInt(req.params.b)
+
+    const resultado = funcoes.sub(a,b )
+    res.send(`A Multiplicação entre ${a} com ${b} é ${resultado}`)
+})
+
+app.get("div/:A.: B", (req,res)=>{
+    const a = parseInt(req.params.a)
+    const b = parseInt(req.params.b)
+
+    const resultado = funcoes.sub(a,b )
+    res.send(`A MDivisão entre ${a} com ${b} é ${resultado}`)
 })
